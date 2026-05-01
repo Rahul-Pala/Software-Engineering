@@ -182,3 +182,6 @@
     border-right-color: var(--border);
   }
 }
+
+.Box { border: 1px solid #aaa; margin: 1em;
+padding: 1em; text-align: center; background: #da2b2b; }
