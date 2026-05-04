@@ -1,3 +1,5 @@
+import Movie from "./Movie";
+
 function MoviesList() {
 // collection of objects representing movies
 const movies = [
@@ -18,13 +20,21 @@ synopsis: "Explorers travel through a wormhole in space.",
 },
 ];
 return (
-<div className="MoviesList componentBox">
-<ul> {/* iterate over each movie, print the title in a list */}
-{ movies.map(movie => (
-<li>{movie.title}</li>
-)) }
-</ul>
-</div>
+<div>
+      <h2>Movies List</h2>
+
+      <ul>
+        {movies.map(movie => (
+          <Movie
+            key={movie.id}   // ✅ IMPORTANT (from page 46)
+            titlee={movie.title}
+            yearr={movie.year}
+            synopsiss={movie.synopsis}
+          />
+        ))}
+      </ul>
+
+    </div>
 )
 }
 export default MoviesList;

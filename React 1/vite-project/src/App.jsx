@@ -15,7 +15,7 @@ import UserCard from './Components/UserCard'
 import MovieCard from './Components/MovieCard'
 import Card from './Components/Card'
 import MoviesList from './Components/MoviesList'
-
+import BigCats from './Components/BigCats'
 function App() {
   
 const jsxcode = <p>My second paragraph</p>
@@ -121,6 +121,7 @@ text={comment.text}/>
     </div>
 
 <MoviesList></MoviesList>
+<BigCats></BigCats>
 </>
 
  )
