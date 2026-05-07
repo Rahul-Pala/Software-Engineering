@@ -16,6 +16,13 @@ import MovieCard from './Components/MovieCard'
 import Card from './Components/Card'
 import MoviesList from './Components/MoviesList'
 import BigCats from './Components/BigCats'
+import Counter from './Components/Counter'
+import MoodChanger from './Components/MoodChanger'
+import LightSwitch from './Components/LightSwitch'
+import Emoji from './Components/Emoji'
+import Hello from './Components/Hello'
+
+
 function App() {
   
 const jsxcode = <p>My second paragraph</p>
@@ -53,6 +60,11 @@ const movie = {
 }
   return (
 <>
+<div>
+  <Hello></Hello>
+  <Emoji></Emoji>
+  <LightSwitch></LightSwitch>
+</div>
  <div>
   <h3 style={{color: 'blue', textTransform: 'uppercase'}}>Welcome!</h3> {/* style object directly in JSX */}
     <br></br>
@@ -122,6 +134,9 @@ text={comment.text}/>
 
 <MoviesList></MoviesList>
 <BigCats></BigCats>
+<Counter></Counter>
+
+<MoodChanger></MoodChanger>
 </>
 
  )
