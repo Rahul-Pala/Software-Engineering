@@ -21,7 +21,8 @@ import MoodChanger from './Components/MoodChanger'
 import LightSwitch from './Components/LightSwitch'
 import Emoji from './Components/Emoji'
 import Hello from './Components/Hello'
-
+import BirthdayTranslator from './Components/BirthdayTranslator'
+import Books from './Components/Books'
 
 function App() {
   
@@ -61,6 +62,8 @@ const movie = {
   return (
 <>
 <div>
+  <Books></Books>
+  <BirthdayTranslator></BirthdayTranslator>
   <Hello></Hello>
   <Emoji></Emoji>
   <LightSwitch></LightSwitch>
