@@ -23,6 +23,7 @@ import Emoji from './Components/Emoji'
 import Hello from './Components/Hello'
 import BirthdayTranslator from './Components/BirthdayTranslator'
 import Books from './Components/Books'
+import Messages from './Components/Messages'
 
 function App() {
   
@@ -62,6 +63,7 @@ const movie = {
   return (
 <>
 <div>
+  <Messages></Messages>
   <Books></Books>
   <BirthdayTranslator></BirthdayTranslator>
   <Hello></Hello>
