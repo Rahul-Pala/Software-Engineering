@@ -2,6 +2,7 @@ import React from "react";
 import SingleCat from "./SingleCat";
 import tiger from "../images/tiger.jpg"
 import jaguar from "../images/jaguar.jpg"
+import { useState } from "react";
 
 function BigCats() {
   const cats = [
@@ -10,10 +11,10 @@ function BigCats() {
   name: "Cheetah",
   latinName: "Acinonyx jubatus",
   image: tiger,
-},
+    },
     {
       id: 2,
-      name: 'Cougar',
+      name: 'aCougar',
       latinName: 'Puma concolor',
       image: jaguar
     },
@@ -47,10 +48,42 @@ function BigCats() {
       latinName: 'Panthera tigris',
       image: 'https://source.unsplash.com/200x200/?tiger'
     }
+
   ]
+
+  const[currentCats, setCurrentCats] = useState(cats)
+
+  const handeSortBigCats = () => {
+
+  let newBigCats = [...currentCats];
+  newBigCats.sort((a, b) => a.name.localeCompare(b.name));
+setCurrentCats(newBigCats)
+  }
+
+  const handleReverseBigCats = () => {
+
+  let newBigCats = [...currentCats];
+  newBigCats.reverse();
+  setCurrentCats(newBigCats);
+}
+
+  const handleFilterCats = () => {
+        let newCats = currentCats.filter(cat => cat.latinName.startsWith('Panthera'));
+        setCurrentCats(newCats);
+    }
+
+    const handleResetCats = () => {
+        setCurrentCats(cats);
+    }    
   return (
-    <ul>
-      {cats.map((cat) => (
+  <>
+  <button onClick={handeSortBigCats}>Sort Cats</button>
+  <button onClick={handleReverseBigCats}>Reverse Cats</button>
+  <button onClick={handleFilterCats}>Filter Panthera Cats</button>
+  <button onClick={handleResetCats}>Reset Cats</button>
+    
+    <ul> 
+      {currentCats.map((cat) => (
         <SingleCat
           key={cat.id}
           name={cat.name}
@@ -59,6 +92,9 @@ function BigCats() {
         ></SingleCat>
       ))}
     </ul>
+  </>
+
+  
   );
 }
 

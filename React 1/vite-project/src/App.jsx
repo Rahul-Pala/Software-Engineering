@@ -63,6 +63,7 @@ const movie = {
   return (
 <>
 <div>
+  <BigCats></BigCats>
   <Messages></Messages>
   <Books></Books>
   <BirthdayTranslator></BirthdayTranslator>
